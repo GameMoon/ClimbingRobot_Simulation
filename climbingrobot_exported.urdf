@@ -1,0 +1,1506 @@
+<?xml version="1.0" ?>
+<robot name="climbingrobot_exported">
+
+<material name="silver">
+  <color rgba="1.000 1.000 1.000 1.000"/>
+</material>
+
+<link name="base_link">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-2.3561372287310188e-15 7.82959340837108e-17 -1.031082645594673e-05"/>
+    <mass value="0.03513113136020855"/>
+    <inertia ixx="4.330327731042047e-05" ixy="6.310867961970989e-19" ixz="-3.130730601860279e-19" iyy="4.3346435253627344e-05" iyz="-1.8065631053765598e-18" izz="8.477337904759145e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="SG90_v141servo1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.00812342267848757 0.008123422678486841 -0.004203010355219587"/>
+    <mass value="0.01188700094392384"/>
+    <inertia ixx="1.0262265710398804e-06" ixy="-2.1220227675882003e-07" ixz="-2.199969893497919e-08" iyy="1.026226571039894e-06" iyz="-2.199969893495203e-08" izz="7.367191028625778e-07"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.033879 -0.033879 -0.005"/>
+    <geometry>
+      <mesh filename="meshes/SG90_v141servo1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.033879 -0.033879 -0.005"/>
+    <geometry>
+      <mesh filename="meshes/SG90_v141servo1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="SG90_v142servo1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.008123422678486716 0.008123422678487376 -0.0042030103552191745"/>
+    <mass value="0.01188700094392384"/>
+    <inertia ixx="1.0262265710398905e-06" ixy="2.1220227675882342e-07" ixz="2.199969893497543e-08" iyy="1.0262265710398872e-06" iyz="-2.19996989349551e-08" izz="7.367191028625846e-07"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.033879 -0.033879 -0.005"/>
+    <geometry>
+      <mesh filename="meshes/SG90_v142servo1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.033879 -0.033879 -0.005"/>
+    <geometry>
+      <mesh filename="meshes/SG90_v142servo1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="SG90_v143servo1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.00812342267848764 -0.00812342267848725 -0.004203010355223124"/>
+    <mass value="0.01188700094392384"/>
+    <inertia ixx="1.0262265710398872e-06" ixy="-2.1220227675882342e-07" ixz="2.1999698934957007e-08" iyy="1.0262265710398905e-06" iyz="2.1999698934981624e-08" izz="7.367191028625846e-07"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.033879 0.033879 -0.005"/>
+    <geometry>
+      <mesh filename="meshes/SG90_v143servo1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.033879 0.033879 -0.005"/>
+    <geometry>
+      <mesh filename="meshes/SG90_v143servo1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="SG90_v144servo1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.00812342267848673 -0.008123422678487695 -0.004203010355223456"/>
+    <mass value="0.01188700094392384"/>
+    <inertia ixx="1.0262265710398905e-06" ixy="2.122022767588268e-07" ixz="-2.1999698934957377e-08" iyy="1.0262265710398838e-06" iyz="2.1999698934981412e-08" izz="7.367191028625982e-07"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.033879 0.033879 -0.005"/>
+    <geometry>
+      <mesh filename="meshes/SG90_v144servo1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.033879 0.033879 -0.005"/>
+    <geometry>
+      <mesh filename="meshes/SG90_v144servo1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="coxa31">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.009871266550128203 -0.004775257127175067 -0.004359762984694017"/>
+    <mass value="0.007837772837962017"/>
+    <inertia ixx="3.729329129582059e-06" ixy="3.1566494508322056e-07" ixz="-1.029336248256677e-07" iyy="3.5502512993738864e-06" iyz="-5.241695255109662e-07" izz="1.2576574418923949e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.045723 0.045723 -0.02065"/>
+    <geometry>
+      <mesh filename="meshes/coxa31.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.045723 0.045723 -0.02065"/>
+    <geometry>
+      <mesh filename="meshes/coxa31.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="coxa41">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.0047752571271741165 0.009871266550127197 -0.004359762984689007"/>
+    <mass value="0.007837772837962017"/>
+    <inertia ixx="3.550251299373822e-06" ixy="-3.156649450832341e-07" ixz="5.241695255110458e-07" iyy="3.7293291295820795e-06" iyz="-1.0293362482555336e-07" izz="1.2576574418924288e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.045723 -0.045723 -0.02065"/>
+    <geometry>
+      <mesh filename="meshes/coxa41.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.045723 -0.045723 -0.02065"/>
+    <geometry>
+      <mesh filename="meshes/coxa41.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="coxa11">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.00987126655012787 0.004775257127173443 -0.004359762984688723"/>
+    <mass value="0.007837772837962017"/>
+    <inertia ixx="3.7293291295820558e-06" ixy="3.156649450832138e-07" ixz="1.0293362482567618e-07" iyy="3.550251299373785e-06" iyz="5.241695255111737e-07" izz="1.2576574418924965e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.045723 -0.045723 -0.02065"/>
+    <geometry>
+      <mesh filename="meshes/coxa11.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.045723 -0.045723 -0.02065"/>
+    <geometry>
+      <mesh filename="meshes/coxa11.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="coxa21">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.00477525712717379 -0.009871266550128821 -0.004359762984693972"/>
+    <mass value="0.007837772837962017"/>
+    <inertia ixx="3.550251299373839e-06" ixy="-3.156649450831833e-07" ixz="-5.241695255110949e-07" iyy="3.729329129582066e-06" iyz="1.0293362482578629e-07" izz="1.257657441892449e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.045723 0.045723 -0.02065"/>
+    <geometry>
+      <mesh filename="meshes/coxa21.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.045723 0.045723 -0.02065"/>
+    <geometry>
+      <mesh filename="meshes/coxa21.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="SG90_v145servo1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.010934706156326385 0.0049912605619404915 -2.060851489460447e-15"/>
+    <mass value="0.01188700094392384"/>
+    <inertia ixx="7.442594259698742e-07" ixy="3.865259570924465e-08" ixz="-3.3881317890172014e-21" iyy="8.064839711737707e-07" iyz="-2.710505431213761e-20" izz="1.2384288477987072e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.062039 0.058009 -0.031025"/>
+    <geometry>
+      <mesh filename="meshes/SG90_v145servo1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.062039 0.058009 -0.031025"/>
+    <geometry>
+      <mesh filename="meshes/SG90_v145servo1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="SG90_v146servo1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.004991260561941942 0.010934706156324386 -2.5431046157819992e-15"/>
+    <mass value="0.01188700094392384"/>
+    <inertia ixx="8.064839711737707e-07" ixy="-3.865259570925143e-08" ixz="6.776263578034403e-21" iyy="7.442594259698674e-07" iyz="-2.710505431213761e-20" izz="1.2384288477987072e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.058009 0.062039 -0.031025"/>
+    <geometry>
+      <mesh filename="meshes/SG90_v146servo1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.058009 0.062039 -0.031025"/>
+    <geometry>
+      <mesh filename="meshes/SG90_v146servo1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="SG90_v147servo1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.004991260561942129 -0.01093470615632746 2.824129818890242e-15"/>
+    <mass value="0.01188700094392384"/>
+    <inertia ixx="8.064839711737911e-07" ixy="-3.865259570924465e-08" ixz="0.0" iyy="7.442594259698742e-07" iyz="-2.0328790734103208e-20" izz="1.2384288477987072e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.058009 -0.062039 -0.031025"/>
+    <geometry>
+      <mesh filename="meshes/SG90_v147servo1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.058009 -0.062039 -0.031025"/>
+    <geometry>
+      <mesh filename="meshes/SG90_v147servo1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="SG90_v148servo1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.010934706156326177 -0.004991260561943427 2.4251434194155763e-15"/>
+    <mass value="0.01188700094392384"/>
+    <inertia ixx="7.44259425969881e-07" ixy="3.8652595709237874e-08" ixz="1.0164395367051604e-20" iyy="8.064839711737978e-07" iyz="-2.0328790734103208e-20" izz="1.2384288477987207e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.062039 -0.058009 -0.031025"/>
+    <geometry>
+      <mesh filename="meshes/SG90_v148servo1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.062039 -0.058009 -0.031025"/>
+    <geometry>
+      <mesh filename="meshes/SG90_v148servo1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="femur41">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.013365496497606197 0.03828276190210535 -1.5716594692349872e-12"/>
+    <mass value="0.012162143940940593"/>
+    <inertia ixx="4.834490015586811e-06" ixy="-6.77229227869793e-07" ixz="-2.1760615228141877e-16" iyy="4.831383351298508e-06" iyz="2.5299180068591443e-16" izz="9.304210074741718e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.068863 -0.0427 -0.031025"/>
+    <geometry>
+      <mesh filename="meshes/femur41.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.068863 -0.0427 -0.031025"/>
+    <geometry>
+      <mesh filename="meshes/femur41.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="femur11">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.03828276190210672 0.013365496497604434 -1.570483326718275e-12"/>
+    <mass value="0.012162143940940593"/>
+    <inertia ixx="4.831383351298495e-06" ixy="6.77229227869793e-07" ixz="-2.531205496938971e-16" iyy="4.834490015586784e-06" iyz="-2.178094401887598e-16" izz="9.304210074741637e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.0427 -0.068863 -0.031025"/>
+    <geometry>
+      <mesh filename="meshes/femur11.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.0427 -0.068863 -0.031025"/>
+    <geometry>
+      <mesh filename="meshes/femur11.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="femur21">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.013365496497605628 -0.03828276190210851 -1.578032843285726e-12"/>
+    <mass value="0.012162143940940593"/>
+    <inertia ixx="4.834490015586797e-06" ixy="-6.77229227869793e-07" ixz="2.1757904722710664e-16" iyy="4.831383351298508e-06" iyz="-2.5339160023701846e-16" izz="9.304210074741718e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.068863 0.0427 -0.031025"/>
+    <geometry>
+      <mesh filename="meshes/femur21.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.068863 0.0427 -0.031025"/>
+    <geometry>
+      <mesh filename="meshes/femur21.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="femur31">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.03828276190210718 -0.013365496497608223 -1.5786608131840296e-12"/>
+    <mass value="0.012162143940940593"/>
+    <inertia ixx="4.831383351298481e-06" ixy="6.772292278697795e-07" ixz="2.5322896991114563e-16" iyy="4.834490015586757e-06" iyz="2.1738253558334364e-16" izz="9.304210074741637e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.0427 0.068863 -0.031025"/>
+    <geometry>
+      <mesh filename="meshes/femur31.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.0427 0.068863 -0.031025"/>
+    <geometry>
+      <mesh filename="meshes/femur31.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="servo_horn31">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.002608204106163345 0.004443229167919324 8.756537162035727e-14"/>
+    <mass value="0.00028369670242485873"/>
+    <inertia ixx="5.434793407380799e-09" ixy="5.115865249621474e-09" ixz="-9.497356921088843e-20" iyy="7.114597025464578e-09" iyz="6.776263578034403e-20" izz="1.0801986166025414e-08"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.094319 0.120482 -0.031025"/>
+    <geometry>
+      <mesh filename="meshes/servo_horn31.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.094319 0.120482 -0.031025"/>
+    <geometry>
+      <mesh filename="meshes/servo_horn31.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="servo_horn41">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.004443229167921572 -0.0026082041061656347 9.701961456443087e-14"/>
+    <mass value="0.00028369670242485873"/>
+    <inertia ixx="7.114597025465002e-09" ixy="-5.1158652496218976e-09" ixz="-6.818615225397118e-20" iyy="5.434793407379105e-09" iyz="-9.539708568451558e-20" izz="1.0801986166024567e-08"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.120482 -0.094319 -0.031025"/>
+    <geometry>
+      <mesh filename="meshes/servo_horn41.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.120482 -0.094319 -0.031025"/>
+    <geometry>
+      <mesh filename="meshes/servo_horn41.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="servo_horn11">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.002608204106164233 -0.004443229167923127 9.952108581678942e-14"/>
+    <mass value="0.00028369670242485873"/>
+    <inertia ixx="5.434793407381646e-09" ixy="5.115865249621474e-09" ixz="9.560884392132915e-20" iyy="7.114597025465002e-09" iyz="-6.860966872759833e-20" izz="1.0801986166025414e-08"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.094319 -0.120482 -0.031025"/>
+    <geometry>
+      <mesh filename="meshes/servo_horn11.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.094319 -0.120482 -0.031025"/>
+    <geometry>
+      <mesh filename="meshes/servo_horn11.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="servo_horn21">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.004443229167921059 0.002608204106160708 8.674311269274426e-14"/>
+    <mass value="0.00028369670242485873"/>
+    <inertia ixx="7.114597025465849e-09" ixy="-5.115865249620627e-09" ixz="6.79743940171576e-20" iyy="5.434793407379105e-09" iyz="9.455005273726128e-20" izz="1.0801986166025414e-08"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.120482 0.094319 -0.031025"/>
+    <geometry>
+      <mesh filename="meshes/servo_horn21.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.120482 0.094319 -0.031025"/>
+    <geometry>
+      <mesh filename="meshes/servo_horn21.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="SG90_detached_v41servo1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.011575392200275356 0.011574606660968212 -0.004278813971776114"/>
+    <mass value="0.014616430773754501"/>
+    <inertia ixx="1.176913486638522e-06" ixy="3.701775929552595e-07" ixz="-9.512408372304464e-08" iyy="1.1769134866494724e-06" iyz="9.512408371862652e-08" izz="1.0612413528235864e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.119188 -0.095613 -0.031025"/>
+    <geometry>
+      <mesh filename="meshes/SG90_detached_v41servo1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.119188 -0.095613 -0.031025"/>
+    <geometry>
+      <mesh filename="meshes/SG90_detached_v41servo1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="SG90_detached_v43servo1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.011574606660969808 0.011575392200273496 -0.004278813971786272"/>
+    <mass value="0.014616430773754501"/>
+    <inertia ixx="1.1769134866494995e-06" ixy="-3.701775929552324e-07" ixz="9.512408371859941e-08" iyy="1.1769134866384948e-06" iyz="9.51240837230853e-08" izz="1.0612413528236406e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.095613 0.119188 -0.031025"/>
+    <geometry>
+      <mesh filename="meshes/SG90_detached_v43servo1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.095613 0.119188 -0.031025"/>
+    <geometry>
+      <mesh filename="meshes/SG90_detached_v43servo1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="SG90_detached_v42servo1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.011575392200275356 -0.011574606660972958 -0.004278813971787462"/>
+    <mass value="0.014616430773754501"/>
+    <inertia ixx="1.176913486638549e-06" ixy="3.701775929552324e-07" ixz="9.512408372307852e-08" iyy="1.1769134866495537e-06" iyz="-9.512408371862652e-08" izz="1.0612413528236948e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.119188 0.095613 -0.031025"/>
+    <geometry>
+      <mesh filename="meshes/SG90_detached_v42servo1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.119188 0.095613 -0.031025"/>
+    <geometry>
+      <mesh filename="meshes/SG90_detached_v42servo1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="SG90_detached_v44servo1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.0115746066609691 -0.01157539220027691 -0.004278813971774792"/>
+    <mass value="0.014616430773754501"/>
+    <inertia ixx="1.1769134866494724e-06" ixy="-3.701775929552324e-07" ixz="-9.512408371862652e-08" iyy="1.1769134866385761e-06" iyz="-9.512408372307175e-08" izz="1.0612413528236948e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.095613 -0.119188 -0.031025"/>
+    <geometry>
+      <mesh filename="meshes/SG90_detached_v44servo1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.095613 -0.119188 -0.031025"/>
+    <geometry>
+      <mesh filename="meshes/SG90_detached_v44servo1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="tibia11">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.003471671715291502 -0.0037763509234774034 -0.025561054706875162"/>
+    <mass value="0.007707264333040497"/>
+    <inertia ixx="3.607355199205736e-06" ixy="7.352659326611448e-08" ixz="1.7136019275137177e-07" iyy="3.613256803894753e-06" iyz="1.5999588737877806e-07" izz="5.37022351107671e-07"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.105385 -0.109415 -0.039325"/>
+    <geometry>
+      <mesh filename="meshes/tibia11.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.105385 -0.109415 -0.039325"/>
+    <geometry>
+      <mesh filename="meshes/tibia11.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="tibia41">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.0037763509234768483 0.0034716717152898785 -0.025461054706881196"/>
+    <mass value="0.007707264333040497"/>
+    <inertia ixx="3.6132568038947665e-06" ixy="-7.352659326612804e-08" ixz="1.599958873786222e-07" iyy="3.6073551992057225e-06" iyz="-1.713601927512803e-07" izz="5.370223511076168e-07"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.109415 -0.105385 -0.039325"/>
+    <geometry>
+      <mesh filename="meshes/tibia41.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.109415 -0.105385 -0.039325"/>
+    <geometry>
+      <mesh filename="meshes/tibia41.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="tibia31">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.0034716717152918353 0.003776350923475183 -0.0255610547068865"/>
+    <mass value="0.007707264333040497"/>
+    <inertia ixx="3.6073551992057225e-06" ixy="7.352659326612804e-08" ixz="-1.713601927514192e-07" iyy="3.6132568038947936e-06" iyz="-1.5999588737849854e-07" izz="5.370223511076168e-07"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.105385 0.109415 -0.039325"/>
+    <geometry>
+      <mesh filename="meshes/tibia31.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.105385 0.109415 -0.039325"/>
+    <geometry>
+      <mesh filename="meshes/tibia31.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="tibia21">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.0037763509234763487 -0.0034716717152955823 -0.025461054706887743"/>
+    <mass value="0.007707264333040497"/>
+    <inertia ixx="3.61325680389478e-06" ixy="-7.352659326611448e-08" ixz="-1.59995887378651e-07" iyy="3.607355199205736e-06" iyz="1.7136019275141243e-07" izz="5.370223511076168e-07"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.109415 0.105385 -0.039325"/>
+    <geometry>
+      <mesh filename="meshes/tibia21.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.109415 0.105385 -0.039325"/>
+    <geometry>
+      <mesh filename="meshes/tibia21.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="magnet41">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-4.461602763350392e-07 -3.3937910129400173e-07 -0.007545429850782305"/>
+    <mass value="0.01248016344329056"/>
+    <inertia ixx="5.52965472682261e-07" ixy="2.3201926491189795e-17" ixz="-1.3552527156068805e-19" iyy="5.52965472682261e-07" iyz="1.2874900798265365e-19" izz="6.358392451507743e-07"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.107047 -0.107754 0.026025"/>
+    <geometry>
+      <mesh filename="meshes/magnet41.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.107047 -0.107754 0.026025"/>
+    <geometry>
+      <mesh filename="meshes/magnet41.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="magnet21">
+  <inertial>
+    <origin rpy="0 0 0" xyz="4.461602755301275e-07 3.3937909774128805e-07 -0.007545429850788772"/>
+    <mass value="0.01248016344329056"/>
+    <inertia ixx="5.52965472682261e-07" ixy="2.3174821436877657e-17" ixz="1.1519648082658485e-19" iyy="5.529654726823153e-07" iyz="-1.4230153513872246e-19" izz="6.358392451507743e-07"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.107047 0.107754 0.026025"/>
+    <geometry>
+      <mesh filename="meshes/magnet21.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.107047 0.107754 0.026025"/>
+    <geometry>
+      <mesh filename="meshes/magnet21.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="magnet11">
+  <inertial>
+    <origin rpy="0 0 0" xyz="3.3937909088566087e-07 -4.4616027435051553e-07 -0.007545429850776223"/>
+    <mass value="0.01248016344329056"/>
+    <inertia ixx="5.529654726822339e-07" ixy="2.3174821436877657e-17" ixz="1.3552527156068805e-19" iyy="5.52965472682261e-07" iyz="-1.4907779871675686e-19" izz="6.358392451507201e-07"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.107754 -0.107047 0.026125"/>
+    <geometry>
+      <mesh filename="meshes/magnet11.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.107754 -0.107047 0.026125"/>
+    <geometry>
+      <mesh filename="meshes/magnet11.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="magnet31">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-3.393791015715575e-07 4.4616028682664677e-07 -0.0075454298507876445"/>
+    <mass value="0.01248016344329056"/>
+    <inertia ixx="5.529654726823153e-07" ixy="2.3229031545501932e-17" ixz="1.3552527156068805e-19" iyy="5.529654726822339e-07" iyz="-1.3552527156068805e-19" izz="6.358392451507201e-07"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.107754 0.107047 0.026125"/>
+    <geometry>
+      <mesh filename="meshes/magnet31.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.107754 0.107047 0.026125"/>
+    <geometry>
+      <mesh filename="meshes/magnet31.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="SG90_v141splined-drive1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-2.817588681536254e-07 -2.8175848913042367e-07 0.008551853418244874"/>
+    <mass value="0.00272942982983066"/>
+    <inertia ixx="7.317000853884175e-08" ixy="5.516971225021962e-16" ixz="2.9010878443459787e-20" iyy="7.317000853884344e-08" iyz="-2.6977999370049466e-19" izz="8.5716164647608e-09"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.045723 -0.045723 -0.0011"/>
+    <geometry>
+      <mesh filename="meshes/SG90_v141splined-drive1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.045723 -0.045723 -0.0011"/>
+    <geometry>
+      <mesh filename="meshes/SG90_v141splined-drive1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="SG90_v141horn1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.0035250421087357 0.0035250421086019945 0.000532476051368757"/>
+    <mass value="0.00028369670242485873"/>
+    <inertia ixx="5.980408066528299e-09" ixy="-4.821578099611888e-09" ixz="-5.939002646914894e-10" iyy="5.980408066298436e-09" iyz="-5.939002647185944e-10" izz="1.1390560466043528e-08"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.045723 -0.045723 -0.01882"/>
+    <geometry>
+      <mesh filename="meshes/SG90_v141horn1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.045723 -0.045723 -0.01882"/>
+    <geometry>
+      <mesh filename="meshes/SG90_v141horn1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="SG90_v142splined-drive1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="2.8175848865164e-07 -2.8175886863934796e-07 0.0085518534182453"/>
+    <mass value="0.00272942982983066"/>
+    <inertia ixx="7.317000853883751e-08" ixy="-5.516954284363017e-16" ixz="2.72109334305444e-19" iyy="7.317000853883836e-08" iyz="3.197549375884984e-20" izz="8.5716164647608e-09"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.045723 -0.045723 -0.0011"/>
+    <geometry>
+      <mesh filename="meshes/SG90_v142splined-drive1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.045723 -0.045723 -0.0011"/>
+    <geometry>
+      <mesh filename="meshes/SG90_v142splined-drive1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="SG90_v142horn1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.0035250421086024455 0.003525042108734555 0.000532476051369319"/>
+    <mass value="0.00028369670242485873"/>
+    <inertia ixx="5.980408066297906e-09" ixy="4.821578099611994e-09" ixz="5.939002647184885e-10" iyy="5.980408066528829e-09" iyz="-5.939002646916482e-10" izz="1.139056046604374e-08"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.045723 -0.045723 -0.01882"/>
+    <geometry>
+      <mesh filename="meshes/SG90_v142horn1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.045723 -0.045723 -0.01882"/>
+    <geometry>
+      <mesh filename="meshes/SG90_v142horn1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="SG90_v143splined-drive1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="2.817588682230143e-07 2.8175848768713374e-07 0.008551853418240971"/>
+    <mass value="0.00272942982983066"/>
+    <inertia ixx="7.31700085388409e-08" ixy="5.516954284363017e-16" ixz="-2.922263668027336e-20" iyy="7.317000853884175e-08" iyz="2.7592098256808834e-19" izz="8.571616464762494e-09"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.045723 0.045723 -0.0011"/>
+    <geometry>
+      <mesh filename="meshes/SG90_v143splined-drive1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.045723 0.045723 -0.0011"/>
+    <geometry>
+      <mesh filename="meshes/SG90_v143splined-drive1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="SG90_v143horn1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.0035250421087356237 -0.0035250421086035835 0.0005324760513646075"/>
+    <mass value="0.00028369670242485873"/>
+    <inertia ixx="5.980408066527982e-09" ixy="-4.821578099611994e-09" ixz="5.939002646911717e-10" iyy="5.980408066298118e-09" iyz="5.939002647180121e-10" izz="1.1390560466043528e-08"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.045723 0.045723 -0.01882"/>
+    <geometry>
+      <mesh filename="meshes/SG90_v143horn1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.045723 0.045723 -0.01882"/>
+    <geometry>
+      <mesh filename="meshes/SG90_v143horn1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="SG90_v144splined-drive1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-2.817584882769397e-07 2.817588676679028e-07 0.008551853418240623"/>
+    <mass value="0.00272942982983066"/>
+    <inertia ixx="7.317000853884175e-08" ixy="-5.516945814033544e-16" ixz="-2.727446090158847e-19" iyy="7.317000853884344e-08" iyz="-2.583450489125616e-20" izz="8.571616464762494e-09"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.045723 0.045723 -0.0011"/>
+    <geometry>
+      <mesh filename="meshes/SG90_v144splined-drive1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.045723 0.045723 -0.0011"/>
+    <geometry>
+      <mesh filename="meshes/SG90_v144splined-drive1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="SG90_v144horn1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.0035250421086025913 -0.0035250421087369282 0.0005324760513640524"/>
+    <mass value="0.00028369670242485873"/>
+    <inertia ixx="5.980408066297695e-09" ixy="4.8215780996121e-09" ixz="-5.939002647180121e-10" iyy="5.9804080665281934e-09" iyz="5.939002646910129e-10" izz="1.139056046604374e-08"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.045723 0.045723 -0.01882"/>
+    <geometry>
+      <mesh filename="meshes/SG90_v144horn1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.045723 0.045723 -0.01882"/>
+    <geometry>
+      <mesh filename="meshes/SG90_v144horn1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="SG90_v145splined-drive1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.006046923627207851 0.0060472992198054715 2.671543541943322e-13"/>
+    <mass value="0.00272942982983066"/>
+    <inertia ixx="4.087081277747746e-08" ixy="3.229919631288607e-08" ixz="1.5161889755851976e-19" iyy="4.087081277782305e-08" iyz="-1.5161889755851976e-19" izz="7.317000798714716e-08"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.055039 0.056524 -0.031025"/>
+    <geometry>
+      <mesh filename="meshes/SG90_v145splined-drive1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.055039 0.056524 -0.031025"/>
+    <geometry>
+      <mesh filename="meshes/SG90_v145splined-drive1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="SG90_v145horn1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.003901623540168861 -0.0031486486019284277 -9.529182998235797e-14"/>
+    <mass value="0.00028369670242485873"/>
+    <inertia ixx="5.43479340738027e-09" ixy="-5.115865249621474e-09" ixz="9.444417361885449e-20" iyy="7.114597025465002e-09" iyz="6.728617974751348e-20" izz="1.0801986166025414e-08"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.067569 0.043994 -0.031025"/>
+    <geometry>
+      <mesh filename="meshes/SG90_v145horn1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.067569 0.043994 -0.031025"/>
+    <geometry>
+      <mesh filename="meshes/SG90_v145horn1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="SG90_v146splined-drive1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.006047299219807241 -0.006046923627209509 2.660267839349473e-13"/>
+    <mass value="0.00272942982983066"/>
+    <inertia ixx="4.0870812777819664e-08" ixy="-3.2299196312884375e-08" ixz="1.5077186461126546e-19" iyy="4.0870812777474074e-08" iyz="1.4823076576950256e-19" izz="7.317000798714716e-08"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.056524 0.055039 -0.031025"/>
+    <geometry>
+      <mesh filename="meshes/SG90_v146splined-drive1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.056524 0.055039 -0.031025"/>
+    <geometry>
+      <mesh filename="meshes/SG90_v146splined-drive1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="SG90_v146horn1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.0031486486019269427 -0.0039016235401708316 -9.674205880827458e-14"/>
+    <mass value="0.00028369670242485873"/>
+    <inertia ixx="7.1145970254652135e-09" ixy="5.115865249621474e-09" ixz="-6.744499842512366e-20" iyy="5.434793407379952e-09" iyz="9.476181097407485e-20" izz="1.0801986166025838e-08"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.043994 0.067569 -0.031025"/>
+    <geometry>
+      <mesh filename="meshes/SG90_v146horn1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.043994 0.067569 -0.031025"/>
+    <geometry>
+      <mesh filename="meshes/SG90_v146horn1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="SG90_v147splined-drive1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.0060472992198079695 0.006046923627206206 2.722926051301755e-13"/>
+    <mass value="0.00272942982983066"/>
+    <inertia ixx="4.087081277782644e-08" ixy="-3.2299196312884375e-08" ixz="-1.5161889755851976e-19" iyy="4.087081277747577e-08" iyz="-1.5500702934753696e-19" izz="7.317000798714378e-08"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.056524 -0.055039 -0.031025"/>
+    <geometry>
+      <mesh filename="meshes/SG90_v147splined-drive1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.056524 -0.055039 -0.031025"/>
+    <geometry>
+      <mesh filename="meshes/SG90_v147splined-drive1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="SG90_v147horn1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.0031486486019263876 0.0039016235401676536 -8.968520370800093e-14"/>
+    <mass value="0.00028369670242485873"/>
+    <inertia ixx="7.114597025465425e-09" ixy="5.115865249621474e-09" ixz="6.855672916839493e-20" iyy="5.434793407379317e-09" iyz="-9.5185327447702e-20" izz="1.0801986166024991e-08"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.043994 -0.067569 -0.031025"/>
+    <geometry>
+      <mesh filename="meshes/SG90_v147horn1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.043994 -0.067569 -0.031025"/>
+    <geometry>
+      <mesh filename="meshes/SG90_v147horn1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="SG90_v148splined-drive1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.006046923627207941 -0.006047299219808559 2.7124830159763746e-13"/>
+    <mass value="0.00272942982983066"/>
+    <inertia ixx="4.087081277747238e-08" ixy="3.229919631288268e-08" ixz="-1.4992483166401116e-19" iyy="4.087081277781458e-08" iyz="1.4992483166401116e-19" izz="7.317000798714039e-08"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.055039 -0.056524 -0.031025"/>
+    <geometry>
+      <mesh filename="meshes/SG90_v148splined-drive1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.055039 -0.056524 -0.031025"/>
+    <geometry>
+      <mesh filename="meshes/SG90_v148splined-drive1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="SG90_v148horn1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.0039016235401694715 0.0031486486019252705 -9.160727731938323e-14"/>
+    <mass value="0.00028369670242485873"/>
+    <inertia ixx="5.4347934073797405e-09" ixy="-5.115865249621474e-09" ixz="-9.550296480292236e-20" iyy="7.114597025464155e-09" iyz="-6.755087754353045e-20" izz="1.0801986166024144e-08"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.067569 -0.043994 -0.031025"/>
+    <geometry>
+      <mesh filename="meshes/SG90_v148horn1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.067569 -0.043994 -0.031025"/>
+    <geometry>
+      <mesh filename="meshes/SG90_v148horn1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="Rigid28" type="fixed">
+  <origin rpy="0 0 0" xyz="0.033879 0.033879 0.005"/>
+  <parent link="base_link"/>
+  <child link="SG90_v141servo1"/>
+</joint>
+
+<joint name="Rigid29" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.033879 0.033879 0.005"/>
+  <parent link="base_link"/>
+  <child link="SG90_v142servo1"/>
+</joint>
+
+<joint name="Rigid30" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.033879 -0.033879 0.005"/>
+  <parent link="base_link"/>
+  <child link="SG90_v143servo1"/>
+</joint>
+
+<joint name="Rigid31" type="fixed">
+  <origin rpy="0 0 0" xyz="0.033879 -0.033879 0.005"/>
+  <parent link="base_link"/>
+  <child link="SG90_v144servo1"/>
+</joint>
+
+<joint name="Rigid32" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 0.0 0.00183"/>
+  <parent link="SG90_v144horn1"/>
+  <child link="coxa31"/>
+</joint>
+
+<joint name="Rigid33" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 0.0 0.00183"/>
+  <parent link="SG90_v141horn1"/>
+  <child link="coxa41"/>
+</joint>
+
+<joint name="Rigid34" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 0.0 0.00183"/>
+  <parent link="SG90_v142horn1"/>
+  <child link="coxa11"/>
+</joint>
+
+<joint name="Rigid35" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 0.0 0.00183"/>
+  <parent link="SG90_v143horn1"/>
+  <child link="coxa21"/>
+</joint>
+
+<joint name="Rigid36" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.016316 -0.012286 0.010375"/>
+  <parent link="coxa21"/>
+  <child link="SG90_v145servo1"/>
+</joint>
+
+<joint name="Rigid37" type="fixed">
+  <origin rpy="0 0 0" xyz="0.012286 -0.016316 0.010375"/>
+  <parent link="coxa31"/>
+  <child link="SG90_v146servo1"/>
+</joint>
+
+<joint name="Rigid38" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.012286 0.016316 0.010375"/>
+  <parent link="coxa11"/>
+  <child link="SG90_v147servo1"/>
+</joint>
+
+<joint name="Rigid39" type="fixed">
+  <origin rpy="0 0 0" xyz="0.016316 0.012286 0.010375"/>
+  <parent link="coxa41"/>
+  <child link="SG90_v148servo1"/>
+</joint>
+
+<joint name="Rigid40" type="fixed">
+  <origin rpy="0 0 0" xyz="0.001294 -0.001294 0.0"/>
+  <parent link="SG90_v148horn1"/>
+  <child link="femur41"/>
+</joint>
+
+<joint name="Rigid41" type="fixed">
+  <origin rpy="0 0 0" xyz="0.001294 0.001294 0.0"/>
+  <parent link="SG90_v147horn1"/>
+  <child link="femur11"/>
+</joint>
+
+<joint name="Rigid42" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.001294 0.001294 0.0"/>
+  <parent link="SG90_v145horn1"/>
+  <child link="femur21"/>
+</joint>
+
+<joint name="Rigid43" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.001294 -0.001294 0.0"/>
+  <parent link="SG90_v146horn1"/>
+  <child link="femur31"/>
+</joint>
+
+<joint name="Rigid56" type="fixed">
+  <origin rpy="0 0 0" xyz="0.051619 -0.051619 0.0"/>
+  <parent link="femur31"/>
+  <child link="servo_horn31"/>
+</joint>
+
+<joint name="Rigid57" type="fixed">
+  <origin rpy="0 0 0" xyz="0.051619 0.051619 0.0"/>
+  <parent link="femur41"/>
+  <child link="servo_horn41"/>
+</joint>
+
+<joint name="Rigid58" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.051619 0.051619 0.0"/>
+  <parent link="femur11"/>
+  <child link="servo_horn11"/>
+</joint>
+
+<joint name="Rigid59" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.051619 -0.051619 0.0"/>
+  <parent link="femur21"/>
+  <child link="servo_horn21"/>
+</joint>
+
+<joint name="Rev60" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.001294 0.001294 0.0"/>
+  <parent link="servo_horn41"/>
+  <child link="SG90_detached_v41servo1"/>
+  <axis xyz="-0.707107 0.707107 0.0"/>
+</joint>
+<transmission name="Rev60_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Rev60">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Rev60_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<joint name="Rev61" type="continuous">
+  <origin rpy="0 0 0" xyz="0.001294 0.001294 0.0"/>
+  <parent link="servo_horn31"/>
+  <child link="SG90_detached_v43servo1"/>
+  <axis xyz="0.707107 0.707107 -0.0"/>
+</joint>
+<transmission name="Rev61_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Rev61">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Rev61_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<joint name="Rev62" type="continuous">
+  <origin rpy="0 0 0" xyz="0.001294 -0.001294 0.0"/>
+  <parent link="servo_horn21"/>
+  <child link="SG90_detached_v42servo1"/>
+  <axis xyz="0.707107 -0.707107 -0.0"/>
+</joint>
+<transmission name="Rev62_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Rev62">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Rev62_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<joint name="Rev63" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.001294 -0.001294 0.0"/>
+  <parent link="servo_horn11"/>
+  <child link="SG90_detached_v44servo1"/>
+  <axis xyz="-0.707107 -0.707107 -0.0"/>
+</joint>
+<transmission name="Rev63_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Rev63">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Rev63_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<joint name="Rigid64" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.009772 -0.009773 0.0083"/>
+  <parent link="SG90_detached_v44servo1"/>
+  <child link="tibia11"/>
+</joint>
+
+<joint name="Rigid65" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.009773 0.009772 0.0083"/>
+  <parent link="SG90_detached_v41servo1"/>
+  <child link="tibia41"/>
+</joint>
+
+<joint name="Rigid66" type="fixed">
+  <origin rpy="0 0 0" xyz="0.009772 0.009773 0.0083"/>
+  <parent link="SG90_detached_v43servo1"/>
+  <child link="tibia31"/>
+</joint>
+
+<joint name="Rigid67" type="fixed">
+  <origin rpy="0 0 0" xyz="0.009773 -0.009772 0.0083"/>
+  <parent link="SG90_detached_v42servo1"/>
+  <child link="tibia21"/>
+</joint>
+
+<joint name="Rigid77" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.002368 0.002369 -0.06535"/>
+  <parent link="tibia41"/>
+  <child link="magnet41"/>
+</joint>
+
+<joint name="Rigid78" type="fixed">
+  <origin rpy="0 0 0" xyz="0.002368 -0.002369 -0.06535"/>
+  <parent link="tibia21"/>
+  <child link="magnet21"/>
+</joint>
+
+<joint name="Rigid79" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.002369 -0.002368 -0.06545"/>
+  <parent link="tibia11"/>
+  <child link="magnet11"/>
+</joint>
+
+<joint name="Rigid80" type="fixed">
+  <origin rpy="0 0 0" xyz="0.002369 0.002368 -0.06545"/>
+  <parent link="tibia31"/>
+  <child link="magnet31"/>
+</joint>
+
+<joint name="SG90_v141_splined-shaft" type="continuous">
+  <origin rpy="0 0 0" xyz="0.011844 0.011844 -0.0039"/>
+  <parent link="SG90_v141servo1"/>
+  <child link="SG90_v141splined-drive1"/>
+  <axis xyz="-0.0 0.0 -1.0"/>
+</joint>
+<transmission name="SG90_v141_splined-shaft_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="SG90_v141_splined-shaft">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="SG90_v141_splined-shaft_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<joint name="SG90_v141_horn" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 0.0 0.01772"/>
+  <parent link="SG90_v141splined-drive1"/>
+  <child link="SG90_v141horn1"/>
+</joint>
+
+<joint name="SG90_v142_splined-shaft" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.011844 0.011844 -0.0039"/>
+  <parent link="SG90_v142servo1"/>
+  <child link="SG90_v142splined-drive1"/>
+  <axis xyz="-0.0 0.0 -1.0"/>
+</joint>
+<transmission name="SG90_v142_splined-shaft_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="SG90_v142_splined-shaft">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="SG90_v142_splined-shaft_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<joint name="SG90_v142_horn" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 0.0 0.01772"/>
+  <parent link="SG90_v142splined-drive1"/>
+  <child link="SG90_v142horn1"/>
+</joint>
+
+<joint name="SG90_v143_splined-shaft" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.011844 -0.011844 -0.0039"/>
+  <parent link="SG90_v143servo1"/>
+  <child link="SG90_v143splined-drive1"/>
+  <axis xyz="-0.0 0.0 -1.0"/>
+</joint>
+<transmission name="SG90_v143_splined-shaft_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="SG90_v143_splined-shaft">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="SG90_v143_splined-shaft_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<joint name="SG90_v143_horn" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 0.0 0.01772"/>
+  <parent link="SG90_v143splined-drive1"/>
+  <child link="SG90_v143horn1"/>
+</joint>
+
+<joint name="SG90_v144_splined-shaft" type="continuous">
+  <origin rpy="0 0 0" xyz="0.011844 -0.011844 -0.0039"/>
+  <parent link="SG90_v144servo1"/>
+  <child link="SG90_v144splined-drive1"/>
+  <axis xyz="-0.0 0.0 -1.0"/>
+</joint>
+<transmission name="SG90_v144_splined-shaft_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="SG90_v144_splined-shaft">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="SG90_v144_splined-shaft_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<joint name="SG90_v144_horn" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 0.0 0.01772"/>
+  <parent link="SG90_v144splined-drive1"/>
+  <child link="SG90_v144horn1"/>
+</joint>
+
+<joint name="SG90_v145_splined-shaft" type="continuous">
+  <origin rpy="0 0 0" xyz="0.007 0.001485 0.0"/>
+  <parent link="SG90_v145servo1"/>
+  <child link="SG90_v145splined-drive1"/>
+  <axis xyz="0.707107 -0.707107 -0.0"/>
+</joint>
+<transmission name="SG90_v145_splined-shaft_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="SG90_v145_splined-shaft">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="SG90_v145_splined-shaft_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<joint name="SG90_v145_horn" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.01253 0.01253 0.0"/>
+  <parent link="SG90_v145splined-drive1"/>
+  <child link="SG90_v145horn1"/>
+</joint>
+
+<joint name="SG90_v146_splined-shaft" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.001485 0.007 0.0"/>
+  <parent link="SG90_v146servo1"/>
+  <child link="SG90_v146splined-drive1"/>
+  <axis xyz="0.707107 0.707107 0.0"/>
+</joint>
+<transmission name="SG90_v146_splined-shaft_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="SG90_v146_splined-shaft">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="SG90_v146_splined-shaft_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<joint name="SG90_v146_horn" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.01253 -0.01253 0.0"/>
+  <parent link="SG90_v146splined-drive1"/>
+  <child link="SG90_v146horn1"/>
+</joint>
+
+<joint name="SG90_v147_splined-shaft" type="continuous">
+  <origin rpy="0 0 0" xyz="0.001485 -0.007 0.0"/>
+  <parent link="SG90_v147servo1"/>
+  <child link="SG90_v147splined-drive1"/>
+  <axis xyz="-0.707107 -0.707107 -0.0"/>
+</joint>
+<transmission name="SG90_v147_splined-shaft_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="SG90_v147_splined-shaft">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="SG90_v147_splined-shaft_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<joint name="SG90_v147_horn" type="fixed">
+  <origin rpy="0 0 0" xyz="0.01253 0.01253 0.0"/>
+  <parent link="SG90_v147splined-drive1"/>
+  <child link="SG90_v147horn1"/>
+</joint>
+
+<joint name="SG90_v148_splined-shaft" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.007 -0.001485 0.0"/>
+  <parent link="SG90_v148servo1"/>
+  <child link="SG90_v148splined-drive1"/>
+  <axis xyz="-0.707107 0.707107 0.0"/>
+</joint>
+<transmission name="SG90_v148_splined-shaft_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="SG90_v148_splined-shaft">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="SG90_v148_splined-shaft_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<joint name="SG90_v148_horn" type="fixed">
+  <origin rpy="0 0 0" xyz="0.01253 -0.01253 0.0"/>
+  <parent link="SG90_v148splined-drive1"/>
+  <child link="SG90_v148horn1"/>
+</joint>
+
+</robot>
