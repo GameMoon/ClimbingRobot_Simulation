@@ -46,3 +46,10 @@ addBody(robot,foot4,"magnet41");
 
 ik = inverseKinematics('RigidBodyTree',robot);
 weights = [0 0 0 1 1 1];
+
+% sim constants
+contact_stiffness = 400/0.001;          % Approximated at weight (N) / desired displacement (m)
+contact_damping = contact_stiffness/10; % Tuned based on contact stiffness value
+mu_s = 0.9;     % Static friction coefficient: Around that of rubber-asphalt
+mu_k = 0.8;     % Kinetic friction coefficient: Lower than the static coefficient
+mu_vth = 0.1;   % Friction velocity threshold (m/s)

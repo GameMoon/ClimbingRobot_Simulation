@@ -12,19 +12,20 @@ feet4Soln = generateLegMovement(robot,ik,weights,hConfig,"feet4",step_size,step_
 
 states = [];
 % default to start position
+states = [states [feet4Soln(1:3,1); feet1Soln(4:6,1);feet2Soln(7:9,1);feet3Soln(10:12,1)]];
 
 % period 1
 states = [states [feet4Soln(1:3,3); feet1Soln(4:6,3);feet2Soln(7:9,1);feet3Soln(10:12,1)]];
-states = [states [feet4Soln(1:3,2); feet1Soln(4:6,3);feet2Soln(7:9,1);feet3Soln(10:12,1)]];
-states = [states [feet4Soln(1:3,4); feet1Soln(4:6,3);feet2Soln(7:9,1);feet3Soln(10:12,1)]];
-states = [states [feet4Soln(1:3,4); feet1Soln(4:6,2);feet2Soln(7:9,1);feet3Soln(10:12,1)]];
+states = [states [feet4Soln(1:3,3); feet1Soln(4:6,2);feet2Soln(7:9,1);feet3Soln(10:12,1)]];
+states = [states [feet4Soln(1:3,3); feet1Soln(4:6,4);feet2Soln(7:9,1);feet3Soln(10:12,1)]];
+states = [states [feet4Soln(1:3,2); feet1Soln(4:6,4);feet2Soln(7:9,1);feet3Soln(10:12,1)]];
 states = [states [feet4Soln(1:3,4); feet1Soln(4:6,4);feet2Soln(7:9,1);feet3Soln(10:12,1)]];
 
 states = [states [feet4Soln(1:3,1); feet1Soln(4:6,1);feet2Soln(7:9,3);feet3Soln(10:12,3)]]; % Body move
 
-states = [states [feet4Soln(1:3,1); feet1Soln(4:6,1);feet2Soln(7:9,3);feet3Soln(10:12,2)]];
-states = [states [feet4Soln(1:3,1); feet1Soln(4:6,1);feet2Soln(7:9,3);feet3Soln(10:12,4)]];
-states = [states [feet4Soln(1:3,1); feet1Soln(4:6,1);feet2Soln(7:9,2);feet3Soln(10:12,4)]];
+states = [states [feet4Soln(1:3,1); feet1Soln(4:6,1);feet2Soln(7:9,2);feet3Soln(10:12,3)]];
+states = [states [feet4Soln(1:3,1); feet1Soln(4:6,1);feet2Soln(7:9,4);feet3Soln(10:12,3)]];
+states = [states [feet4Soln(1:3,1); feet1Soln(4:6,1);feet2Soln(7:9,4);feet3Soln(10:12,2)]];
 states = [states [feet4Soln(1:3,1); feet1Soln(4:6,1);feet2Soln(7:9,4);feet3Soln(10:12,4)]];
 
 states = [states [feet4Soln(1:3,3); feet1Soln(4:6,3);feet2Soln(7:9,1);feet3Soln(10:12,1)]]; % Body move
@@ -69,9 +70,10 @@ for i = 1:size(states,2)
 end
 %hold off;
 %%
-interactiveRigidBodyTree(robot,'MarkerBodyName','feet1','Frames','off');
+% interactiveRigidBodyTree(robot,'MarkerBodyName','feet1','Frames','off');
 
 function [soln] = generateLegMovement(robot,ik,weights,hConfig,bodyPart,step_size,step_height,mid_offset)
+    step_size = -1*step_size;
     feetPos = tform2trvec(getTransform(robot,hConfig,bodyPart)) + mid_offset*[1,0,0];
     centerPos = feetPos  + step_height *[0,0,1] ;
     endForw =  feetPos + step_size * [1,0,0];

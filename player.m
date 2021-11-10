@@ -1,4 +1,5 @@
-client = tcpclient("192.168.0.38",3333);
+% client = tcpclient("192.168.1.1",3333);
+client = tcpclient("192.168.4.1",3333);
 
 tcp_data = read(client,6);
 disp("connected");
@@ -6,12 +7,13 @@ disp("connected");
 setRobotPos(states(:,1)',client);
 pause(1);
  
-for i = 1:size(states,2)
-   setRobotPos(states(:,i)',client);
-   pause(0.5);
-end
+% for i = 1:size(states,2)
+%     setRobotPos(states(:,i)',client);
+%     pause(0.5);
+% end
 
-
+pause(1);
+setRobotPos(states(:,1)',client);
 clear client;
 
 function [tcp_data, msg] = setRobotPos(sol,client)
@@ -23,10 +25,13 @@ function [tcp_data, msg] = setRobotPos(sol,client)
     res_sol([7 8 9]) = sol([10 11 12]);
     res_sol([10 11 12]) = sol([7 8 9]);
     msg = uint8(interp1(x,v,res_sol));
+    
+    disp(msg);
     msg(13) = 16;
     msg(14) = 0;
     %disp(msg)
     write(client,msg);
     tcp_data = read(client,12);
+    
     disp(tcp_data);
 end
