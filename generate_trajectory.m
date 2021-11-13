@@ -7,38 +7,34 @@ mid_offset = 0.01;
 hConfig = initConfig;
 bodyPart = "feet1";
 
-n_step_size = -1*step_size;
-centerPos = tform2trvec(getTransform(robot,hConfig,bodyPart)) + mid_offset*[1,0,0];
+function [soln,tvec] = generateTrajectory(robot,ik,weights,hConfig,bodyPart,step_size,step_height,mid_offset)
+    n_step_size = -1*step_size;
+    centerPos = tform2trvec(getTransform(robot,hConfig,bodyPart)) + mid_offset*[1,0,0];
 
-startPos = centerPos - n_step_size * [1,0,0]; 
-endPos = centerPos + n_step_size * [1,0,0];
-halfStart = centerPos + (startPos - centerPos) / 2 + step_height *[0,0,1]; 
-halfEnd = centerPos + (endPos - centerPos) / 2 + step_height *[0,0,1];
+    startPos = centerPos - n_step_size * [1,0,0]; 
+    endPos = centerPos + n_step_size * [1,0,0];
+    halfStart = centerPos + (startPos - centerPos) / 2 + step_height *[0,0,1]; 
+    halfEnd = centerPos + (endPos - centerPos) / 2 + step_height *[0,0,1];
 
-%projM = [1 0; 0 0; 0 1];
-
-
-points = [startPos;halfStart;halfEnd; endPos];
-% points2d = []
-% 
-% for i=1:size(points,1)
-%     points2d = [points2d; points(i,:)*projM];
-% end
-
-tpts = 0:size(points,1)-1;
-%wpts = [points2d(:,1), points2d(:,2)]';
-% wpts = points2d';
-tvec = 0:0.1:size(points,1)-1;
-
-[qx, qd, qdd, pp] = bsplinepolytraj(points(:,1)', tpts, tvec);
-qy = bsplinepolytraj(points(:,2)', tpts, tvec);
-qz = bsplinepolytraj(points(:,3)', tpts, tvec);
+    %projM = [1 0; 0 0; 0 1];
 
 
-targetPoints = [qx' qy' qz'];
+    points = [startPos;halfStart;halfEnd; endPos];
 
-targetp_to_states;
-sim_states = [tvec; soln];
+
+    tpts = 0:size(points,1)-1;
+    tvec = 0:0.1:size(points,1)-1;
+
+    [qx, qd, qdd, pp] = bsplinepolytraj(points(:,1)', tpts, tvec);
+    qy = bsplinepolytraj(points(:,2)', tpts, tvec);
+    qz = bsplinepolytraj(points(:,3)', tpts, tvec);
+
+
+    targetPoints = [qx' qy' qz'];
+
+    targetp_to_states;
+    sim_states = [tvec; soln];
+end
 %%
 % rc = rateControl(20);
 % for i = 1:size(states,2)
@@ -47,7 +43,7 @@ sim_states = [tvec; soln];
 %     disp(rc)
 %     %pause;
 % end
-plot(tvec,qx,'x')
+% plot(tvec,qx,'x')
 % plot(tvec,targetPoints,'x')
 
 
