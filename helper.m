@@ -38,6 +38,27 @@ while step_height > 0
       end
 end
 
+%%
+bodyPart="feet1";
+feetTr = tform2trvec(getTransform(robot,initConfig,bodyPart)) + mid_offset*[1,1,0]+ step_size * [1,0,0];
+step_width = 0.20;
+step_size = 0.05;
+
+while step_height > 0
+      qInit = initConfig;
+      newFeet = feetTr + step_width * [0,1,0];
+      rng(0);
+      [qSol, solnInfo] = ik(bodyPart,trvec2tform(newFeet),weights,qInit);
+      if strcmp(solnInfo.Status,'success')
+          qs(i,:) = qSol;
+          qInit = qSol;
+          solnInfo;
+          break;
+      else
+          step_width = step_width - 0.01
+      end
+end
+
 %% Show movement
 newFeet = feetTr + step_size * [0,1,0] + step_height * [ 0, 0, 1];
 newFeet2 = feetTr + -step_size * [0,1,0];

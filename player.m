@@ -31,10 +31,10 @@ end
 % %      pause(0.0001);
 % end
 
-hold on;
+% hold on;
 % tiledlayout(2,1)
 % nexttile
-plot(result(1,:),result(11:13,:))
+% plot(result(1,:),result(11:13,:))
 % nexttile
 % plot(result(1,:),sent(11:13,:))
 

@@ -8,7 +8,7 @@ defaultAngle = pi/8;
 for i = 1:3:12
     hConfig(i) = 0;
     hConfig(i+1) = defaultAngle;
-    hConfig(i+2) = -defaultAngle;
+    hConfig(i+2) = -defaultAngle*0.9;
 end
 initConfig = hConfig;
 
