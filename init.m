@@ -45,7 +45,9 @@ addBody(robot,foot3,"magnet31");
 addBody(robot,foot4,"magnet41");
 
 ik = inverseKinematics('RigidBodyTree',robot);
-weights = [0 0 0 1 1 1];
+ik.SolverParameters.MaxIterations = 10;
+
+weights = [0 0 0 0.8 0.8 0.8];
 
 % sim constants
 contact_stiffness = 400/0.001;          % Approximated at weight (N) / desired displacement (m)
