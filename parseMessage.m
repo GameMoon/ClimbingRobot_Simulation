@@ -23,7 +23,12 @@ function [markerInfos,latestFrameID] = parseMessage(tcp_data)
     
     % select only the latest frame
     for i = 1:size(tempInfos,1)
-        if tempInfos(i,5) == latestFrameID
+        if tempInfos(i,5) == latestFrameID && tempInfos(i,1) == 1
+            markerInfos = [markerInfos; tempInfos(i,:)];
+        end
+    end
+     for i = 1:size(tempInfos,1)
+        if tempInfos(i,5) == latestFrameID && tempInfos(i,1) ~= 1
             markerInfos = [markerInfos; tempInfos(i,:)];
         end
     end

@@ -18,28 +18,28 @@ cameraPos = [0 0.038 0.015];
 % feet positions
 
 
-feetPositions = zeros(12,3);
-
-feetPositions(1,:) = tform2trvec(getTransform(robot,initConfig,"feet1")) - mid_offset*[0,1,0];
-feetPositions(4,:) = tform2trvec(getTransform(robot,initConfig,"feet2")) + mid_offset*[0,1,0];
-feetPositions(7,:) = tform2trvec(getTransform(robot,initConfig,"feet3")) + mid_offset*[0,1,0];
-feetPositions(10,:) = tform2trvec(getTransform(robot,initConfig,"feet4")) - mid_offset*[0,1,0];
-
-for i=1:3:12
-    feetPositions(i+1,:) = feetPositions(i,:) + step_size * [0,1,0];
-    feetPositions(i+2,:) = feetPositions(i,:) - step_size * [0,1,0];
-end
+% feetPositions = zeros(12,3);
+% 
+% feetPositions(1,:) = tform2trvec(getTransform(robot,initConfig,"feet1")) - mid_offset*[0,1,0];
+% feetPositions(4,:) = tform2trvec(getTransform(robot,initConfig,"feet2")) + mid_offset*[0,1,0];
+% feetPositions(7,:) = tform2trvec(getTransform(robot,initConfig,"feet3")) + mid_offset*[0,1,0];
+% feetPositions(10,:) = tform2trvec(getTransform(robot,initConfig,"feet4")) - mid_offset*[0,1,0];
+% 
+% for i=1:3:12
+%     feetPositions(i+1,:) = feetPositions(i,:) + step_size * [0,1,0];
+%     feetPositions(i+2,:) = feetPositions(i,:) - step_size * [0,1,0];
+% end
 
 defaultFeetPositions = feetPositions;
 
-% markerPoint = [-0.1 0.10 -0.06];
-% markerPoints = [markerPoints; markerPoint];
-markerPoints = [];
+markerPoint = [-0.1 0.16 -0.06];
+markerPoints = [markerPoints; markerPoint];
+% markerPoints = [];
 robotPosition = [0.0 0.0 0.0];
 
-angle = -deg2rad(10);
+% angle = -deg2rad(10);
 tic
-discont_rotate;
+discont_step;
 toc
 
 sim("climbingrobot_simulation",toffset);
@@ -61,6 +61,7 @@ tcp_data = [];
 currentFrame = 0;
 
 updateIndex = 0;
+savedPositions = [robotPosition];
 while 1
     
     write(cameraClient,uint8('a'));
@@ -89,8 +90,8 @@ while 1
             markerPoint = (cameraPos + markerPoint)+robotPosition;
             markerPoint(3) = markerPoint(3) * -1;
             
-            currentAngle = atan2(endPoint(1)-robotPosition(1),endPoint(2)-robotPosition(2));
-            disp("before angle: "+ rad2deg(currentAngle) + "dist: "+norm(endPoint-robotPosition));
+%             currentAngle = atan2(endPoint(1)-robotPosition(1),endPoint(2)-robotPosition(2));
+%             disp("before angle: "+ rad2deg(currentAngle) + "dist: "+norm(endPoint-robotPosition));
             
             if markerInfos(i,1) == 1
                 if norm(endPoint) > 0
@@ -100,6 +101,7 @@ while 1
                     updateSize = norm(updateVector);
                     if updateSize > 0.01
                         robotPosition = robotPosition + updateVector;
+                        
                         isRobotPosUpdate = 1;
                         disp("robot pos updated");
                     end
@@ -111,25 +113,30 @@ while 1
 %                     continue;
                 end
                 
-%             else
-%                 markerPoint(2) = markerPoint(2) + 0.0325; % obstacle radius
-%                 
-%                 isSame = 0;
-%                 for i = 1:1:size(markerPoints,1)
-%                     if norm(markerPoints(i,:)-markerPoint) < 0.01
-%                         isSame = 1;
-%                         break
-%                     end
-%                 end
-% 
-%                 if isSame == 0
-%                     markerPoints = [markerPoints; markerPoint];
-%                 end              
+            elseif size(markerPoints, 1) < 1
+                markerPoint(2) = markerPoint(2) + 0.031; % obstacle radius
+                
+                isSame = 0;
+                for i = 1:size(markerPoints,1)
+                    if norm(markerPoints(i,:)-markerPoint) < 0.05
+                        isSame = 1;
+                        break
+                    end
+                end
+
+                if isSame == 0
+                    markerPoints = [markerPoints; markerPoint];
+                end              
 %                 
             end
-
         end
-        disp("markerPoints: "+markerPoints);
+       
+        disp("robotPos: "+robotPosition);
+        for i = 1:size(markerPoints,1)
+            disp("dist from marker "+ i+ " : "+norm(markerPoints(i,:)-robotPosition));
+            disp("markerPoint: "+markerPoints(i,:));
+        end
+        
         %disp("Marker pos: " + markerPoint);
 %         disp(markerPoint);
 %         disp("Dist from marker: "+norm(endPoint-robotPosition));
@@ -137,12 +144,11 @@ while 1
    
 %         show(robot,initConfig,'Frames','off');
     
-%         scatter3(robotPosition(1),robotPosition(2),robotPosition(3),"blue");
-%         hold on;
-%         scatter3(endPoint(1),endPoint(2),endPoint(3),"red");
-        
+     
+         
 %         currentAngle = atan2(endPoint(1)-robotPosition(1),endPoint(2)-robotPosition(2));
 %         disp("angle: "+ rad2deg(currentAngle) + "dist: "+norm(endPoint-robotPosition));
+       
         if updateIndex == 2
          if norm(endPoint) > 0
             endDist = norm(endPoint -robotPosition);
@@ -161,7 +167,7 @@ while 1
                 step_size = default_step_size;
             end
             
-            if abs(currentAngle) > deg2rad(5)
+            if abs(currentAngle) > deg2rad(9)
                 angle = currentAngle;
                 discont_rotate;
                 disp("rotate: "+rad2deg(angle));
@@ -173,6 +179,7 @@ while 1
     %                 pause(3);
                 playAnimation(sim_states,client);
             end
+            savedPositions = [savedPositions; robotPosition];
          end
             updateIndex = 0;
         else
@@ -195,6 +202,7 @@ clear cameraClient;
 clear client;
 
 
+
 % show(robot,initConfig,'Frames','off');
 % selectedPoint = markerPoints(1,:)-robotPosition;
 % hold on;
@@ -215,4 +223,13 @@ disp("connected");
 %     disp("robotPos: "+robotPosition);
 % end
 
-clear client;
+clear client
+
+%%
+axis equal;
+hold on; 
+scatter(savedPositions(:,1),savedPositions(:,2),'filled'); 
+
+scatter(endPoint(1),endPoint(2),'filled'); 
+scatter(markerPoints(1,1),markerPoints(1,2),'filled'); 
+hold off;

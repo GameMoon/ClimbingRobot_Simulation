@@ -1,0 +1,149 @@
+digraph G {
+node [shape=box];
+"base_link" [label="base_link"];
+"SG90_v141servo1" [label="SG90_v141servo1"];
+"SG90_v141splined-drive1" [label="SG90_v141splined-drive1"];
+"SG90_v141horn1" [label="SG90_v141horn1"];
+"coxa41" [label="coxa41"];
+"SG90_v148servo1" [label="SG90_v148servo1"];
+"SG90_v148splined-drive1" [label="SG90_v148splined-drive1"];
+"SG90_v148horn1" [label="SG90_v148horn1"];
+"femur41" [label="femur41"];
+"servo_horn41" [label="servo_horn41"];
+"SG90_detached_v41servo1" [label="SG90_detached_v41servo1"];
+"tibia41" [label="tibia41"];
+"magnet41" [label="magnet41"];
+"SG90_v142servo1" [label="SG90_v142servo1"];
+"SG90_v142splined-drive1" [label="SG90_v142splined-drive1"];
+"SG90_v142horn1" [label="SG90_v142horn1"];
+"coxa11" [label="coxa11"];
+"SG90_v147servo1" [label="SG90_v147servo1"];
+"SG90_v147splined-drive1" [label="SG90_v147splined-drive1"];
+"SG90_v147horn1" [label="SG90_v147horn1"];
+"femur11" [label="femur11"];
+"servo_horn11" [label="servo_horn11"];
+"SG90_detached_v44servo1" [label="SG90_detached_v44servo1"];
+"tibia11" [label="tibia11"];
+"magnet11" [label="magnet11"];
+"SG90_v143servo1" [label="SG90_v143servo1"];
+"SG90_v143splined-drive1" [label="SG90_v143splined-drive1"];
+"SG90_v143horn1" [label="SG90_v143horn1"];
+"coxa21" [label="coxa21"];
+"SG90_v145servo1" [label="SG90_v145servo1"];
+"SG90_v145splined-drive1" [label="SG90_v145splined-drive1"];
+"SG90_v145horn1" [label="SG90_v145horn1"];
+"femur21" [label="femur21"];
+"servo_horn21" [label="servo_horn21"];
+"SG90_detached_v42servo1" [label="SG90_detached_v42servo1"];
+"tibia21" [label="tibia21"];
+"magnet21" [label="magnet21"];
+"SG90_v144servo1" [label="SG90_v144servo1"];
+"SG90_v144splined-drive1" [label="SG90_v144splined-drive1"];
+"SG90_v144horn1" [label="SG90_v144horn1"];
+"coxa31" [label="coxa31"];
+"SG90_v146servo1" [label="SG90_v146servo1"];
+"SG90_v146splined-drive1" [label="SG90_v146splined-drive1"];
+"SG90_v146horn1" [label="SG90_v146horn1"];
+"femur31" [label="femur31"];
+"servo_horn31" [label="servo_horn31"];
+"SG90_detached_v43servo1" [label="SG90_detached_v43servo1"];
+"tibia31" [label="tibia31"];
+"magnet31" [label="magnet31"];
+node [shape=ellipse, color=blue, fontcolor=blue];
+"base_link" -> "Rigid28" [label="xyz: 0.033879 0.033879 0.005 \nrpy: 0 -0 0"]
+"Rigid28" -> "SG90_v141servo1"
+"SG90_v141servo1" -> "SG90_v141_splined-shaft" [label="xyz: 0.011844 0.011844 -0.0039 \nrpy: 0 -0 0"]
+"SG90_v141_splined-shaft" -> "SG90_v141splined-drive1"
+"SG90_v141splined-drive1" -> "SG90_v141_horn" [label="xyz: 0 0 0.01772 \nrpy: 0 -0 0"]
+"SG90_v141_horn" -> "SG90_v141horn1"
+"SG90_v141horn1" -> "Rigid33" [label="xyz: 0 0 0.00183 \nrpy: 0 -0 0"]
+"Rigid33" -> "coxa41"
+"coxa41" -> "Rigid39" [label="xyz: 0.016316 0.012286 0.010375 \nrpy: 0 -0 0"]
+"Rigid39" -> "SG90_v148servo1"
+"SG90_v148servo1" -> "SG90_v148_splined-shaft" [label="xyz: -0.007 -0.001485 0 \nrpy: 0 -0 0"]
+"SG90_v148_splined-shaft" -> "SG90_v148splined-drive1"
+"SG90_v148splined-drive1" -> "SG90_v148_horn" [label="xyz: 0.01253 -0.01253 0 \nrpy: 0 -0 0"]
+"SG90_v148_horn" -> "SG90_v148horn1"
+"SG90_v148horn1" -> "Rigid40" [label="xyz: 0.001294 -0.001294 0 \nrpy: 0 -0 0"]
+"Rigid40" -> "femur41"
+"femur41" -> "Rigid57" [label="xyz: 0.051619 0.051619 0 \nrpy: 0 -0 0"]
+"Rigid57" -> "servo_horn41"
+"servo_horn41" -> "Rev60" [label="xyz: -0.001294 0.001294 0 \nrpy: 0 -0 0"]
+"Rev60" -> "SG90_detached_v41servo1"
+"SG90_detached_v41servo1" -> "Rigid65" [label="xyz: -0.009773 0.009772 0.0083 \nrpy: 0 -0 0"]
+"Rigid65" -> "tibia41"
+"tibia41" -> "Rigid77" [label="xyz: -0.002368 0.002369 -0.06535 \nrpy: 0 -0 0"]
+"Rigid77" -> "magnet41"
+"base_link" -> "Rigid29" [label="xyz: -0.033879 0.033879 0.005 \nrpy: 0 -0 0"]
+"Rigid29" -> "SG90_v142servo1"
+"SG90_v142servo1" -> "SG90_v142_splined-shaft" [label="xyz: -0.011844 0.011844 -0.0039 \nrpy: 0 -0 0"]
+"SG90_v142_splined-shaft" -> "SG90_v142splined-drive1"
+"SG90_v142splined-drive1" -> "SG90_v142_horn" [label="xyz: 0 0 0.01772 \nrpy: 0 -0 0"]
+"SG90_v142_horn" -> "SG90_v142horn1"
+"SG90_v142horn1" -> "Rigid34" [label="xyz: 0 0 0.00183 \nrpy: 0 -0 0"]
+"Rigid34" -> "coxa11"
+"coxa11" -> "Rigid38" [label="xyz: -0.012286 0.016316 0.010375 \nrpy: 0 -0 0"]
+"Rigid38" -> "SG90_v147servo1"
+"SG90_v147servo1" -> "SG90_v147_splined-shaft" [label="xyz: 0.001485 -0.007 0 \nrpy: 0 -0 0"]
+"SG90_v147_splined-shaft" -> "SG90_v147splined-drive1"
+"SG90_v147splined-drive1" -> "SG90_v147_horn" [label="xyz: 0.01253 0.01253 0 \nrpy: 0 -0 0"]
+"SG90_v147_horn" -> "SG90_v147horn1"
+"SG90_v147horn1" -> "Rigid41" [label="xyz: 0.001294 0.001294 0 \nrpy: 0 -0 0"]
+"Rigid41" -> "femur11"
+"femur11" -> "Rigid58" [label="xyz: -0.051619 0.051619 0 \nrpy: 0 -0 0"]
+"Rigid58" -> "servo_horn11"
+"servo_horn11" -> "Rev63" [label="xyz: -0.001294 -0.001294 0 \nrpy: 0 -0 0"]
+"Rev63" -> "SG90_detached_v44servo1"
+"SG90_detached_v44servo1" -> "Rigid64" [label="xyz: -0.009772 -0.009773 0.0083 \nrpy: 0 -0 0"]
+"Rigid64" -> "tibia11"
+"tibia11" -> "Rigid79" [label="xyz: -0.002369 -0.002368 -0.06545 \nrpy: 0 -0 0"]
+"Rigid79" -> "magnet11"
+"base_link" -> "Rigid30" [label="xyz: -0.033879 -0.033879 0.005 \nrpy: 0 -0 0"]
+"Rigid30" -> "SG90_v143servo1"
+"SG90_v143servo1" -> "SG90_v143_splined-shaft" [label="xyz: -0.011844 -0.011844 -0.0039 \nrpy: 0 -0 0"]
+"SG90_v143_splined-shaft" -> "SG90_v143splined-drive1"
+"SG90_v143splined-drive1" -> "SG90_v143_horn" [label="xyz: 0 0 0.01772 \nrpy: 0 -0 0"]
+"SG90_v143_horn" -> "SG90_v143horn1"
+"SG90_v143horn1" -> "Rigid35" [label="xyz: 0 0 0.00183 \nrpy: 0 -0 0"]
+"Rigid35" -> "coxa21"
+"coxa21" -> "Rigid36" [label="xyz: -0.016316 -0.012286 0.010375 \nrpy: 0 -0 0"]
+"Rigid36" -> "SG90_v145servo1"
+"SG90_v145servo1" -> "SG90_v145_splined-shaft" [label="xyz: 0.007 0.001485 0 \nrpy: 0 -0 0"]
+"SG90_v145_splined-shaft" -> "SG90_v145splined-drive1"
+"SG90_v145splined-drive1" -> "SG90_v145_horn" [label="xyz: -0.01253 0.01253 0 \nrpy: 0 -0 0"]
+"SG90_v145_horn" -> "SG90_v145horn1"
+"SG90_v145horn1" -> "Rigid42" [label="xyz: -0.001294 0.001294 0 \nrpy: 0 -0 0"]
+"Rigid42" -> "femur21"
+"femur21" -> "Rigid59" [label="xyz: -0.051619 -0.051619 0 \nrpy: 0 -0 0"]
+"Rigid59" -> "servo_horn21"
+"servo_horn21" -> "Rev62" [label="xyz: 0.001294 -0.001294 0 \nrpy: 0 -0 0"]
+"Rev62" -> "SG90_detached_v42servo1"
+"SG90_detached_v42servo1" -> "Rigid67" [label="xyz: 0.009773 -0.009772 0.0083 \nrpy: 0 -0 0"]
+"Rigid67" -> "tibia21"
+"tibia21" -> "Rigid78" [label="xyz: 0.002368 -0.002369 -0.06535 \nrpy: 0 -0 0"]
+"Rigid78" -> "magnet21"
+"base_link" -> "Rigid31" [label="xyz: 0.033879 -0.033879 0.005 \nrpy: 0 -0 0"]
+"Rigid31" -> "SG90_v144servo1"
+"SG90_v144servo1" -> "SG90_v144_splined-shaft" [label="xyz: 0.011844 -0.011844 -0.0039 \nrpy: 0 -0 0"]
+"SG90_v144_splined-shaft" -> "SG90_v144splined-drive1"
+"SG90_v144splined-drive1" -> "SG90_v144_horn" [label="xyz: 0 0 0.01772 \nrpy: 0 -0 0"]
+"SG90_v144_horn" -> "SG90_v144horn1"
+"SG90_v144horn1" -> "Rigid32" [label="xyz: 0 0 0.00183 \nrpy: 0 -0 0"]
+"Rigid32" -> "coxa31"
+"coxa31" -> "Rigid37" [label="xyz: 0.012286 -0.016316 0.010375 \nrpy: 0 -0 0"]
+"Rigid37" -> "SG90_v146servo1"
+"SG90_v146servo1" -> "SG90_v146_splined-shaft" [label="xyz: -0.001485 0.007 0 \nrpy: 0 -0 0"]
+"SG90_v146_splined-shaft" -> "SG90_v146splined-drive1"
+"SG90_v146splined-drive1" -> "SG90_v146_horn" [label="xyz: -0.01253 -0.01253 0 \nrpy: 0 -0 0"]
+"SG90_v146_horn" -> "SG90_v146horn1"
+"SG90_v146horn1" -> "Rigid43" [label="xyz: -0.001294 -0.001294 0 \nrpy: 0 -0 0"]
+"Rigid43" -> "femur31"
+"femur31" -> "Rigid56" [label="xyz: 0.051619 -0.051619 0 \nrpy: 0 -0 0"]
+"Rigid56" -> "servo_horn31"
+"servo_horn31" -> "Rev61" [label="xyz: 0.001294 0.001294 0 \nrpy: 0 -0 0"]
+"Rev61" -> "SG90_detached_v43servo1"
+"SG90_detached_v43servo1" -> "Rigid66" [label="xyz: 0.009772 0.009773 0.0083 \nrpy: 0 -0 0"]
+"Rigid66" -> "tibia31"
+"tibia31" -> "Rigid80" [label="xyz: 0.002369 0.002368 -0.06545 \nrpy: 0 -0 0"]
+"Rigid80" -> "magnet31"
+}

@@ -1,7 +1,21 @@
 % default to start position
+feetPositions = zeros(12,3);
+
+feetPositions(1,:) = tform2trvec(getTransform(robot,initConfig,"feet1")) - mid_offset*[0,1,0];
+feetPositions(4,:) = tform2trvec(getTransform(robot,initConfig,"feet2")) + mid_offset*[0,1,0];
+feetPositions(7,:) = tform2trvec(getTransform(robot,initConfig,"feet3")) + mid_offset*[0,1,0];
+feetPositions(10,:) = tform2trvec(getTransform(robot,initConfig,"feet4")) - mid_offset*[0,1,0];
+
+for i=1:3:12
+    feetPositions(i+1,:) = feetPositions(i,:) + step_size * [0,1,0];
+    feetPositions(i+2,:) = feetPositions(i,:) - step_size * [0,1,0];
+end
+
+defaultFeetPositions = feetPositions;
+
 
 % Check obstacles
-feetPositions = checkMarkerPosition(markerPoints,robotPosition,defaultFeetPositions,[1 4 9 12]);
+feetPositions = checkMarkerPosition(markerPoints,robotPosition,defaultFeetPositions,[],[1 4 9 12]);
 
 feet1StartState = ik("feet1",trvec2tform(feetPositions(1+0,:)),weights,initConfig);
 feet2StartState = ik("feet2",trvec2tform(feetPositions(4+0,:)),weights,initConfig);
@@ -23,7 +37,7 @@ toffset = toffset + tvec(end) + resolution;
 sim_states = [sim_states [tvec+toffset; soln]];
 toffset = toffset + tvec(end) + resolution;
 
-feetPositions = checkMarkerPosition(markerPoints,robotPosition,defaultFeetPositions,[1 4 8 10]);
+feetPositions = checkMarkerPosition(markerPoints,robotPosition,defaultFeetPositions,[1 4 8 11],[]);
 % Body move
 [body1,tvec] = generateTrajectory("feet1",feetPositions(1,:),feetPositions(1+2,:),0, resolution,ik, weights,soln(:,end),mid_offset);
 [body2,tvec] = generateTrajectory("feet2",feetPositions(4,:),feetPositions(4+2,:),0, resolution,ik, weights,soln(:,end),mid_offset);
@@ -37,7 +51,7 @@ toffset = toffset + tvec(end) + resolution;
 % UPDATE robot position
 %robotPosition = robotPosition + (step_size + 0.01)* [0,1,0];
 % Check obstacles
-feetPositions = checkMarkerPosition(markerPoints,robotPosition,defaultFeetPositions,[]);
+feetPositions = checkMarkerPosition(markerPoints,robotPosition,defaultFeetPositions,[],[]);
 
 % PERIOD 2 ----------------------------
 
@@ -50,7 +64,7 @@ sim_states = [sim_states [tvec+toffset; soln]];
 toffset = toffset + tvec(end) + resolution;
 
 
-feetPositions = checkMarkerPosition(markerPoints,robotPosition,defaultFeetPositions,[2 5 7 10]);
+feetPositions = checkMarkerPosition(markerPoints,robotPosition,defaultFeetPositions,[2 5 7 10],[]);
 % Body move
 [body1,tvec] = generateTrajectory("feet1",feetPositions(1+1,:),feetPositions(1,:),0, resolution,ik, weights,soln(:,end),mid_offset);
 [body2,tvec] = generateTrajectory("feet2",feetPositions(4+1,:),feetPositions(4,:),0, resolution,ik, weights,soln(:,end),mid_offset);
